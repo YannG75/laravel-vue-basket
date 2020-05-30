@@ -27,10 +27,10 @@
         },
         methods: {
             addToCard($id) {
-                axios.post('https://lvl-vue-basket.herokuapp.com/api/cart', {product_id: $id})
+                axios.post(process.env.APP_URL+'/api/cart', {product_id: $id})
                 .then( res => {
                     if(res.status === 200)
-                    axios.get('https://lvl-vue-basket.herokuapp.com/api/cart')
+                    axios.get(process.env.APP_URL+'/api/cart')
                     .then(basket => {
                         this.$emit("update-basket", basket.data)
                     })
