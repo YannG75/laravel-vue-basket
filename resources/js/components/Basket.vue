@@ -32,10 +32,10 @@
 
         methods: {
             deleteProduct($id,$index){
-                axios.delete(process.env.APP_URL+'/api/cart/'+$id)
+                axios.delete('https://lvl-vue-basket.herokuapp.com/api/cart/'+$id)
                 .then( res => {
                     if(res.status === 200)
-                        axios.get(process.env.APP_URL+'/api/cart')
+                        axios.get('/api/cart')
                             .then(basket => {
                                 this.$emit("update-basket", basket.data)
                             })
@@ -43,10 +43,10 @@
             },
 
             destroy() {
-                axios.delete(process.env.APP_URL+'/api/cart')
+                axios.delete('https://lvl-vue-basket.herokuapp.com/api/cart')
                 .then(res => {
                     if(res.status === 200)
-                        axios.get(process.env.APP_URL+'/api/cart')
+                        axios.get('https://lvl-vue-basket.herokuapp.com/api/cart')
                             .then(basket => {
                                 this.$emit("update-basket", basket.data)
                             })
