@@ -35,7 +35,7 @@
                 axios.delete('https://lvl-vue-basket.herokuapp.com/api/cart/'+$id)
                 .then( res => {
                     if(res.status === 200)
-                        axios.get('/api/cart')
+                        axios.get('https://lvl-vue-basket.herokuapp.com/api/cart')
                             .then(basket => {
                                 this.$emit("update-basket", basket.data)
                             })
