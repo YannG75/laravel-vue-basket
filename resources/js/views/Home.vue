@@ -31,12 +31,12 @@
             Basket
         },
         mounted() {
-            axios.get('/api/products')
+            axios.get(process.env.APP_URL+'/api/products')
             .then(product => {
                 this.AllProducts = product.data
             })
 
-            axios.get('/api/cart')
+            axios.get(process.env.APP_URL+'/api/cart')
             .then( cart => {
                 this.basket = cart.data
                 this.basket.forEach( product => {
