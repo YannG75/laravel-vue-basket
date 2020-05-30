@@ -31,12 +31,12 @@
             Basket
         },
         mounted() {
-            axios.get('http://127.0.0.1:8000/api/products')
+            axios.get('/api/products')
             .then(product => {
                 this.AllProducts = product.data
             })
 
-            axios.get('http://127.0.0.1:8000/api/cart')
+            axios.get('/api/cart')
             .then( cart => {
                 this.basket = cart.data
                 this.basket.forEach( product => {
