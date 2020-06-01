@@ -1,7 +1,7 @@
 <template>
     <div class="Home">
         <nav class="navbar navbar-light bg-light shadow mb-5 sticky-top">
-            <span class="navbar-brand mb-0 h1">Navbar</span>
+            <span class="navbar-brand mb-0 h1">Le commerçant</span>
             <span>{{basket.length}} item{{basket.length >1 ? 's': ''}} in cart ({{count }} €)</span>
         </nav>
         <main class="d-flex bg">
